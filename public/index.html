@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <!-- Link to our future stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for a nicer look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="todo-app">
+        <header>
+            <h1>My To-Do List</h1>
+        </header>
+        
+        <section class="input-section">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button id="add-task-btn">Add Task</button>
+        </section>
+        
+        <section class="task-list-section">
+            <h2>Tasks</h2>
+            <ul id="task-list">
+                <!-- Tasks will be added here by JavaScript later -->
+                <li class="completed"><span>Finish Node.js project</span> <button>Delete</button></li>
+                <li><span>Go to the gym</span> <button>Delete</button></li>
+                <li><span>Buy groceries</span> <button>Delete</button></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- We will add JavaScript later to make it interactive -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>

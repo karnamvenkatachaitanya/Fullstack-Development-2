@@ -366,7 +366,7 @@
 <div id="cartPage" style="display:none;">
     <h2>Your Cart</h2>
     <div id="cartItems"></div>
-    <p><strong>Total:</strong> $<span id="cartTotal">0.00</span></p>
+    <p><strong>Total:</strong> ₹<span id="cartTotal">0.00</span></p>
     <button id="checkoutBtn">Checkout</button>
     <button id="backToProductsBtnFromCart">Back to Products</button>
 </div>
@@ -657,7 +657,7 @@
             card.innerHTML = `
                 <img src="${prod.image}" alt="${prod.name}" class="productImage" />
                 <div class="productName">${prod.name}</div>
-                <div class="productPrice">$${prod.price.toFixed(2)}</div>
+                <div class="productPrice">₹${prod.price.toFixed(2)}</div>
                 <button class="addToCartBtn">Add to Cart</button>
             `;
 
@@ -677,7 +677,7 @@
 
         document.getElementById('detailImage').src = product.image;
         document.getElementById('detailName').textContent = product.name;
-        document.getElementById('detailPrice').textContent = `$${product.price.toFixed(2)}`;
+        document.getElementById('detailPrice').textContent = `₹${product.price.toFixed(2)}`;
         document.getElementById('detailDescription').textContent = product.description;
         
         document.getElementById('addToCartDetailBtn').onclick = () => {
@@ -729,7 +729,7 @@
                 const cartItemEl = document.createElement('div');
                 cartItemEl.innerHTML = `
                     <div>${item.name} (x${item.quantity})</div>
-                    <div>$${(item.price * item.quantity).toFixed(2)}</div>
+                    <div>₹${(item.price * item.quantity).toFixed(2)}</div>
                     <button onclick="removeFromCart(${item.id})">Remove</button>
                 `;
                 cartItemsContainer.appendChild(cartItemEl);
@@ -803,7 +803,7 @@
                 <td>${o.orderId}</td>
                 <td>${o.productName} (x${o.quantity})</td>
                 <td>${o.category}</td>
-                <td>$${o.price.toFixed(2)}</td>
+                <td>₹${o.price.toFixed(2)}</td>
                 <td>${o.date}</td>
             `;
             ordersTableBody.appendChild(tr);
